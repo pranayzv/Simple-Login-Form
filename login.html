@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Form</title>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript">
+            function onSubmit(){
+                var username = document.getElementById("username").value;
+                var pass  = document.getElementById("pass").value;
+                if(pass.length>6 && username.length>4){
+                    alert("Hello, "+username);
+                }
+                
+            }
+        </script>
+    </head>
+    <body>
+        <div class="login" >
+            <div class="myform">
+                <h1 class="heading">Login Form</h1>
+                <div class="oauthlogins">
+                    <a href="#" class="oauthicons"><i class="fab fa-facebook-f"></i></a>       
+                    <a href="#" class="oauthicons"><i class="fab fa-google"></i></a>
+                    <br> <br> <br>
+                    <p>or use your account</p>
+                </div>
+                <form >
+                    <input type="text" id="username" minlength="4" maxlength="8" placeholder="Username" required/> <br>
+                    <input type="password" id="pass" minlength="6" placeholder="Password" maxlength="12" required/> <br>
+                    <a href="#" class="forgotpass">Forgot your password?</a><br>
+                    <button class="subbtn" onclick="onSubmit()">Login</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
